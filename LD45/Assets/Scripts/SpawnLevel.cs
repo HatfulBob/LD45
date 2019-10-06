@@ -11,17 +11,29 @@ public class SpawnLevel : MonoBehaviour
     public float spawnRadius = 200f;
 
     public GameObject obj;
+    bool isOccupied = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        for(int i = 0; i < spawnAmmount; i++)
+        for (int i = 0; i < spawnAmmount; i++)
         {
-            float radius = Random.Range(0, spawnRadius);
-            Vector3 pos = RandomCircle(transform.position, radius);
-            Quaternion rot = Quaternion.FromToRotation(Vector3.forward, transform.position);
-            GameObject newObj = Instantiate(obj, pos, rot);
-            newObj.transform.parent = transform;
+            Debug.Log(i);
+           do
+           {
+                float radius = Random.Range(0, spawnRadius);
+                Vector3 pos = RandomCircle(transform.position, radius);
+                Debug.Log("test");
+                isOccupied = Physics.CheckSphere(pos, 1f);
+                Debug.Log(isOccupied + " i");
+                if (!isOccupied)
+                {
+                    Debug.Log("Placed");
+                    Quaternion rot = Quaternion.FromToRotation(Vector3.forward, transform.position);
+                    GameObject newObj = Instantiate(obj, pos, rot);
+                    newObj.transform.parent = transform;
+                }
+            } while (isOccupied);
         }
     }
 
