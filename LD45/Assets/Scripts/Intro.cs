@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Intro : MonoBehaviour
 {
-    public float spaceScale = -200f; //what size should the skybox blow up to be?
+    public float spaceScale = -400f; //what size should the skybox blow up to be?
     public float scalingSpeed = 5f;
     public GameObject startingText;
     public GameObject skybox;
@@ -36,6 +36,11 @@ public class Intro : MonoBehaviour
 
         if (initialClick)
         {
+            if (startingText.activeSelf)
+            {
+
+                startingText.SetActive(false);
+            }
             //explode the universe!
             if (skybox.transform.localScale.z > spaceScale)
             {
