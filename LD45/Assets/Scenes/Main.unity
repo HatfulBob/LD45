@@ -249,10 +249,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 142d3c5633d153947bbb4d50a09257ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spaceScale: -200
+  spaceScale: -400
   scalingSpeed: -5
   startingText: {fileID: 1062569544}
   skybox: {fileID: 1597714082}
+  levelSpawner: {fileID: 1749732436}
 --- !u!4 &659671259
 Transform:
   m_ObjectHideFlags: 0
@@ -734,6 +735,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1597714082}
   m_Mesh: {fileID: 4300000, guid: 0f366836bbb065640b1ed74f7a9a64fa, type: 2}
+--- !u!114 &1749732436 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4633465600660738432, guid: a81bce4f93128024abb0cbe7939b8b56,
+    type: 3}
+  m_PrefabInstance: {fileID: 1013546021}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9d864495b23a1b4692657bb311a4ca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2044903380
 GameObject:
   m_ObjectHideFlags: 0

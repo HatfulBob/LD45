@@ -14,7 +14,7 @@ public class SpawnLevel : MonoBehaviour
     bool isOccupied = false;
 
     // Start is called before the first frame update
-    void Start()
+    public void GenerateLevel()
     {
         for (int i = 0; i < spawnAmmount; i++)
         {

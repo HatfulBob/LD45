@@ -8,6 +8,7 @@ public class Intro : MonoBehaviour
     public float scalingSpeed = 5f;
     public GameObject startingText;
     public GameObject skybox;
+    public SpawnLevel levelSpawner;
 
     private bool initialClick = false;
     private float timeTillHintGiven;
@@ -55,6 +56,7 @@ public class Intro : MonoBehaviour
         if (!initialClick)
         {
             initialClick = true;
+            levelSpawner.GenerateLevel();
         }
     }
 
