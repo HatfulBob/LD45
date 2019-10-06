@@ -42,8 +42,8 @@ public class SpawnLevel : MonoBehaviour
         float ang = Random.Range(0f, 360f);
         Vector3 pos;
         pos.x = centre.x + radius * Mathf.Sin(ang * Mathf.Deg2Rad);
-        pos.y = centre.y + radius * Mathf.Cos(ang * Mathf.Deg2Rad);
-        pos.z = centre.z;
+        pos.z = centre.z + radius * Mathf.Cos(ang * Mathf.Deg2Rad);
+        pos.y = centre.y + Random.Range(-20f, 20f);
         return pos;
     }
 }
