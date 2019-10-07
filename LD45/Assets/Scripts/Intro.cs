@@ -35,6 +35,12 @@ public class Intro : MonoBehaviour
                 startingText.SetActive(true);
         }
 
+        if (Input.GetKeyDown("space") && !initialClick)
+        {
+            initialClick = true;
+            levelSpawner.GenerateLevel();
+        }
+
         if (initialClick)
         {
             if (startingText.activeSelf)
@@ -51,6 +57,8 @@ public class Intro : MonoBehaviour
 
     }
 
+}
+    /*
     private void OnMouseDown()
     {
         if (!initialClick)
