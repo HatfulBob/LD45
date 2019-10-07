@@ -8,6 +8,7 @@ public class GravityWell : MonoBehaviour
 
     private readonly float G = 6.67408e-6f;
     private Rigidbody rigidBody;
+    private MassTracker massTracker;
 
     public GameObject soundEffect;
 
@@ -15,6 +16,7 @@ public class GravityWell : MonoBehaviour
     {
         rigidBody = this.GetComponent<Rigidbody>();
         rigidBody.mass = 10000000;
+        massTracker = GameObject.FindObjectOfType<MassTracker>();
     }
 
     void OnCollisionEnter(Collision col)
@@ -27,6 +29,8 @@ public class GravityWell : MonoBehaviour
         //TODO eject the remaining mass outwards in a random direction
 
         float retainedAmmount = mass - ejectionAmmount;
+        massTracker.massTracked += retainedAmmount;
+
         //add the 95-80% of the mass to the current mass
         rigidBody.mass = rigidBody.mass + retainedAmmount;
         //delete the other object

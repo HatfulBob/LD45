@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Intro : MonoBehaviour
 {
@@ -45,13 +46,16 @@ public class Intro : MonoBehaviour
         {
             if (startingText.activeSelf)
             {
-
-                startingText.SetActive(false);
+                startingText.GetComponent<Text>().text = "Loading...";
             }
             //explode the universe!
             if (skybox.transform.localScale.z > spaceScale)
             {
                 skybox.transform.localScale = new Vector3(skybox.transform.localScale.x + scalingSpeed, skybox.transform.localScale.y + scalingSpeed, skybox.transform.localScale.z + scalingSpeed);
+            } else
+            {
+
+                startingText.SetActive(false);
             }
         }
 

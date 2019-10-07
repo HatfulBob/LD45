@@ -5,19 +5,11 @@ using UnityEngine;
 public class MouseBehaviour : MonoBehaviour
 {
     public GameObject gravityWell;
-<<<<<<< HEAD
-
-    private GameObject spawnedObj;
-    void LeftClickBehaviour(Vector3 position)
-    {
-        spawnedObj = Instantiate(gravityWell, position, Quaternion.identity);
-=======
     public Intro intro;
     void LeftClickBehaviour(Vector3 position)
     {
         if(intro.initialClick)
         Instantiate(gravityWell, position, Quaternion.identity);
->>>>>>> efba4fa2a8647b2e450c2908dfcc16dafb78492f
     }
 
     void RightClickBehaviour(Vector3 position)
@@ -52,14 +44,6 @@ public class MouseBehaviour : MonoBehaviour
             RightClickBehaviour(getMouseClickPosition());
         }
 
-        float change = Input.GetAxis("Mouse ScrollWheel");
-        if(change > 0)
-        {
-            Debug.Log("Scroll");
-            spawnedObj.GetComponent<Orbiting>().IncrementSpeed();
-        }else if(change < 0)
-        {
-            spawnedObj.GetComponent<Orbiting>().DecrementSpeed();
-        }
+
     }
 }
