@@ -11,6 +11,7 @@ public class SpawnLevel : MonoBehaviour
     public float spawnRadius = 200f;
 
     public GameObject obj;
+    public GameObject sun;
     bool isOccupied = false;
 
     // Start is called before the first frame update
@@ -35,6 +36,7 @@ public class SpawnLevel : MonoBehaviour
                 }
             } while (isOccupied);
         }
+        Instantiate(sun, gameObject.transform);
     }
 
     Vector3 RandomCircle(Vector3 centre, float radius)
