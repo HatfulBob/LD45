@@ -1,4 +1,4 @@
-# Tactical Chef
+# Galaxy Playground
 The ultimate space physics destruction simulator created for Ludum Dare 45: Start with Nothing
 
 ## How to play
