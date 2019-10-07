@@ -254,6 +254,7 @@ MonoBehaviour:
   startingText: {fileID: 1062569544}
   skybox: {fileID: 1597714082}
   levelSpawner: {fileID: 1749732436}
+  initialClick: 0
 --- !u!4 &659671259
 Transform:
   m_ObjectHideFlags: 0
@@ -314,6 +315,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravityWell: {fileID: 4464348296679786795, guid: 72baf875c742a494383a0d97257b37e8,
     type: 3}
+  intro: {fileID: 659671258}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0

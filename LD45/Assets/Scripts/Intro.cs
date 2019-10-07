@@ -10,7 +10,7 @@ public class Intro : MonoBehaviour
     public GameObject skybox;
     public SpawnLevel levelSpawner;
 
-    private bool initialClick = false;
+    public bool initialClick = false;
     private float timeTillHintGiven;
     private float timeTillHintGivenMax = 5f;//hot many seconds of waiting before the game tells you to click;
 
@@ -67,5 +67,5 @@ public class Intro : MonoBehaviour
             levelSpawner.GenerateLevel();
         }
     }
-
-}
+    
+}*/

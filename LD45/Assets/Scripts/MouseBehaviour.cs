@@ -5,8 +5,10 @@ using UnityEngine;
 public class MouseBehaviour : MonoBehaviour
 {
     public GameObject gravityWell;
+    public Intro intro;
     void LeftClickBehaviour(Vector3 position)
     {
+        if(intro.initialClick)
         Instantiate(gravityWell, position, Quaternion.identity);
     }
 
