@@ -22,7 +22,7 @@ public class SpawnLevel : MonoBehaviour
             Debug.Log(i);
            do
            {
-                float radius = Random.Range(0, spawnRadius);
+                float radius = Random.Range(15, spawnRadius);
                 Vector3 pos = RandomCircle(transform.position, radius);
                 Debug.Log("test");
                 isOccupied = Physics.CheckSphere(pos, 1f);
@@ -31,7 +31,8 @@ public class SpawnLevel : MonoBehaviour
                 {
                     Debug.Log("Placed");
                     Quaternion rot = Quaternion.FromToRotation(Vector3.forward, transform.position);
-                    GameObject newObj = Instantiate(obj, pos, rot);
+                    GameObject newObj = Instantiate(obj, pos, rot);              
+                    newObj.GetComponent<GravityObject>().SetID(i);
                     newObj.transform.parent = transform;
                 }
             } while (isOccupied);

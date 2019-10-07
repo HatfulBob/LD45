@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 3607765740120451785}
   m_Layer: 0
   m_Name: Gravity Object 1
-  m_TagString: Untagged
+  m_TagString: planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123,6 +123,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d4c5db87dee4584882502bdc97ab01e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundEffect: {fileID: 3489563732451614379, guid: a5a8241a16a2aa54fb87dad003bec429,
+    type: 3}
 --- !u!114 &3607765740120451785
 MonoBehaviour:
   m_ObjectHideFlags: 0

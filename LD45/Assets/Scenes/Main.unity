@@ -294,6 +294,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 433.05, y: 341.38}
   m_EdgeRadius: 0
+--- !u!1 &692242253 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4633465600660738435, guid: a81bce4f93128024abb0cbe7939b8b56,
+    type: 3}
+  m_PrefabInstance: {fileID: 1013546021}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &692242255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692242253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 178749408b6832648a4a317fd33bbff2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gravityWell: {fileID: 4464348296679786795, guid: 72baf875c742a494383a0d97257b37e8,
+    type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -646,7 +666,6 @@ GameObject:
   - component: {fileID: 1597714083}
   - component: {fileID: 1597714087}
   - component: {fileID: 1597714086}
-  - component: {fileID: 1597714085}
   - component: {fileID: 1597714084}
   m_Layer: 0
   m_Name: Space
@@ -682,19 +701,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 0.08
---- !u!135 &1597714085
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1597714082}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1597714086
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -747,7 +753,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1013546021}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 692242253}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9d864495b23a1b4692657bb311a4ca8, type: 3}

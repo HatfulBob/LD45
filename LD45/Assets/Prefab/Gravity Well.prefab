@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: 5269106647990866370}
   - component: {fileID: 2378688392611674579}
   - component: {fileID: 4801438820087951315}
+  - component: {fileID: -8313074494091532956}
   m_Layer: 0
-  m_Name: Sphere (1)
+  m_Name: Gravity Well
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -123,3 +124,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attractionRadius: 50
+  soundEffect: {fileID: 3489563732451614379, guid: a5a8241a16a2aa54fb87dad003bec429,
+    type: 3}
+--- !u!114 &-8313074494091532956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4464348296679786795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06e63751801192c439ad3801cd1acccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xSpread: 0
+  zSpread: 0
+  yOffset: 0
+  center: {fileID: 0}
+  rotSpeed: 0.05
+  clockwiseRoation: 0

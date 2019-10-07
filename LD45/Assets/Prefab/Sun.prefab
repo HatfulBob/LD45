@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4654533770916407181}
   - component: {fileID: 2142650573270779956}
   - component: {fileID: 1783580047974560832}
-  - component: {fileID: 8067611173568514684}
   - component: {fileID: 6214681519299745817}
   m_Layer: 0
   m_Name: Sun
@@ -29,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 8377932122354204118}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.07557964, y: 13.570759, z: -10.00704}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 20, y: 20, z: 20}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -80,19 +79,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &8067611173568514684
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8377932122354204118}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!122 &6214681519299745817
 Halo:
   m_ObjectHideFlags: 0

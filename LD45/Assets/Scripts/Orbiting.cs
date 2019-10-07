@@ -26,7 +26,12 @@ public class Orbiting : MonoBehaviour
             clockwiseRoation = false;
         }
 
-        center = GameObject.Find("star"); 
+        center = GameObject.Find("star");
+        float dist = Vector3.Distance(center.transform.position, transform.position);
+        xSpread = dist;
+        zSpread = dist;
+        yOffset = transform.position.y;
+
     }
     // Update is called once per frame
     void Update()

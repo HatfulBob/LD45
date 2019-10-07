@@ -9,20 +9,22 @@ public class GravityWell : MonoBehaviour
     private readonly float G = 6.67408e-6f;
     private Rigidbody rigidBody;
 
+    public GameObject soundEffect;
+
     void Start()
     {
         rigidBody = this.GetComponent<Rigidbody>();
-        rigidBody.mass = Random.Range(1, 20000);
+        rigidBody.mass = 10000000;
     }
 
     void OnCollisionEnter(Collision col)
     {
+        Instantiate(soundEffect, col.transform.position, Quaternion.identity);
         //get the other object, get its mass
         float mass = col.gameObject.GetComponent<Rigidbody>().mass;
         //eject between 5-20% of the mass in a random direction
         float ejectionAmmount = Random.Range(0.05f, 0.2f) * mass;
         //TODO eject the remaining mass outwards in a random direction
-
 
         float retainedAmmount = mass - ejectionAmmount;
         //add the 95-80% of the mass to the current mass
@@ -36,7 +38,7 @@ public class GravityWell : MonoBehaviour
         Collider[] inRange = Physics.OverlapSphere(this.transform.position, attractionRadius);
         for(int i = 0; i < inRange.Length; i++)
         {
-            if (inRange[i].gameObject.name != this.gameObject.name)
+            if (inRange[i].gameObject.name != this.gameObject.name && inRange[i].gameObject.name != "Sun(Clone)")
             {
                 
                 Vector3 direction = this.transform.position - inRange[i].transform.position;
