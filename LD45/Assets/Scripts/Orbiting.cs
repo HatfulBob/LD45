@@ -57,4 +57,16 @@ public class Orbiting : MonoBehaviour
             transform.position = pos + center.transform.position;
         }
     }
+
+    public void IncrementSpeed()
+    {
+        xSpread += 0.5f;
+        zSpread += 0.5f;
+    }
+
+    public void DecrementSpeed()
+    {
+        xSpread -= 0.5f;
+        zSpread -= 0.5f;
+    }
 }
